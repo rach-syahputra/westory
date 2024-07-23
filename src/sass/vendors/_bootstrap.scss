@@ -1,7 +1,9 @@
 // Using built-in modules
-
+@use 'sass:map';
 // Custom modules
 @use '../vendors-extensions/bootstraps/components/navbar' as navbar;
+@use '../vendors-extensions/bootstraps/components/card' as card;
+@use '../vendors-extensions/bootstraps/variables/font-size.scss' as fz;
 
 // ==================================================
 // Bootstrap
@@ -18,8 +20,17 @@
 @import '../../../node_modules/bootstrap/scss/variables';
 
 // Menerapkan/override variables Bootstrap apa pun di sini
+// Utilities
+$font-sizes: map.deep-merge($font-sizes, fz.$font-sizes);
+
 // Navbar
 $navbar-light-color: navbar.$light-gray;
+
+// Card
+$card-border-width: card.$border-width;
+$card-border-radius: card.$border-radius;
+$card-spacer-x: card.$spacer-x;
+$card-spacer-y: card.$spacer-y;
 
 //
 // Konfigurasi Bootstrap
