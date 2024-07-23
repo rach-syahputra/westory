@@ -3,6 +3,8 @@
 
 .card {
   @include mix.centering-using-flex($flex-dir: column);
+  outline: none;
+  border: none;
   width: 100%;
   gap: 8px;
   padding: 0;
