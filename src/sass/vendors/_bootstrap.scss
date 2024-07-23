@@ -1,3 +1,8 @@
+// Using built-in modules
+
+// Custom modules
+@use '../vendors-extensions/bootstraps/components/navbar' as navbar;
+
 // ==================================================
 // Bootstrap
 // ==================================================
@@ -13,6 +18,8 @@
 @import '../../../node_modules/bootstrap/scss/variables';
 
 // Menerapkan/override variables Bootstrap apa pun di sini
+// Navbar
+$navbar-light-color: navbar.$light-gray;
 
 //
 // Konfigurasi Bootstrap
