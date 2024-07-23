@@ -12,10 +12,6 @@
   font-family: var.$primary-font;
 }
 
-header {
-  width: 100%;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -23,8 +19,8 @@ header {
   width: 360px;
 }
 
-.container {
-  padding: 16px;
+main {
+  padding: 64px 16px;
   max-width: 360px;
   margin: auto;
 }
@@ -40,7 +36,7 @@ p {
 }
 
 @media screen and (min-width: map.get(var.$breakpoints, 'lg')) {
-  .container {
+  main {
     max-width: 540px;
   }
 
@@ -50,7 +46,7 @@ p {
 }
 
 @media screen and (min-width: map.get(var.$breakpoints, 'xl')) {
-  .container {
+  main {
     max-width: 720px;
   }
 
