@@ -12,6 +12,11 @@
   font-family: var.$primary-font;
 }
 
+.container {
+  width: 100%;
+  padding: 8px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -20,7 +25,7 @@
 }
 
 main {
-  padding: 64px 16px;
+  padding: 64px 0;
   max-width: 360px;
   margin: auto;
 }
