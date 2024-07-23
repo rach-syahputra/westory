@@ -12,6 +12,17 @@
   font-family: var.$primary-font;
 }
 
+header {
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  margin: auto;
+  width: 360px;
+}
+
 .container {
   padding: 16px;
   max-width: 360px;
@@ -32,10 +43,18 @@ p {
   .container {
     max-width: 540px;
   }
+
+  .navbar {
+    width: 540px;
+  }
 }
 
 @media screen and (min-width: map.get(var.$breakpoints, 'xl')) {
   .container {
     max-width: 720px;
+  }
+
+  .navbar {
+    width: 720px;
   }
 }
