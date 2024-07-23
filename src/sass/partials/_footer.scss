@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+.footer-container {
+  background-color: var.$dark;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+
+  .socmed-list {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+
+    .socmed-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+      .bi {
+        color: #fff;
+        font-size: 18px;
+        transition: var.$smooth-transition;
+
+        &:hover {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  .footer-text {
+    color: #fff;
+    font-size: var.$regular-font-size;
+  }
+}
