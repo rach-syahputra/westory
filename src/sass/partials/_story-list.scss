@@ -2,8 +2,10 @@
 @use '../abstracts/mixins' as mix;
 @use 'sass:map';
 
-main .container .story-list {
-  @include mix.full-width;
-  @include mix.centering-using-flex($flex-dir: column);
-  gap: 32px;
+main {
+  .story-list {
+    @include mix.full-width;
+    @include mix.centering-using-flex($flex-dir: column);
+    gap: 32px;
+  }
 }
