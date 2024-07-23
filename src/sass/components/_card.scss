@@ -1,0 +1,46 @@
+@use '../abstracts//variables' as var;
+@use '../abstracts//mixins' as mix;
+
+.card {
+  @include mix.centering-using-flex($flex-dir: column);
+  width: 100%;
+  gap: 8px;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+
+  .card-image {
+    @include mix.image-size;
+
+    img {
+      @include mix.full-size;
+      @include mix.cover-center-image;
+      border-radius: var.$primary-border-radius;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 0;
+
+    .user-name {
+      font-size: var.$regular-font-size;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: var.$regular-font-size;
+    }
+
+    .date {
+      font-size: var.$small-font-size;
+      color: var.$gray;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
