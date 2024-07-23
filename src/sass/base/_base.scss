@@ -1,0 +1,40 @@
+@use '../abstracts//variables' as var;
+@use 'sass:map';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var.$primary-fonts;
+}
+
+.container {
+  padding: 16px;
+  max-width: 360px;
+  margin: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, 'lg')) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, 'xl')) {
+  .container {
+    max-width: 720px;
+  }
+}
