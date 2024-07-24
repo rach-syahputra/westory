@@ -6,6 +6,7 @@ import './components/index'
 
 // Import javascript file as needed
 import * as bootstrap from 'bootstrap'
+import Dashboard from './pages/dashboard'
 
 // Routing
 const routes = {
