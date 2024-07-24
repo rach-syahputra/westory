@@ -10,7 +10,7 @@ class NavLinks extends LitWithoutShadowDom {
     return html`
       <ul class="navbar-nav">
         <nav-link to="/" content="Dashboard"></nav-link>
-        <nav-link to="/" content="About"></nav-link>
+        <nav-link to="/about.html" content="About"></nav-link>
       </ul>
     `
   }
