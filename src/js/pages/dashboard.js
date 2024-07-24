@@ -38,9 +38,6 @@ const Dashboard = {
       return storyCard
     })
 
-    console.log(storyList)
-    console.log(...stories)
-
     storyList.append(...stories)
   },
 
@@ -54,7 +51,7 @@ const Dashboard = {
       year: 'numeric'
     }
 
-    const formattedDate = new Intl.DateTimeFormat('id-ID', options).format(date)
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date)
     return formattedDate
   }
 }
