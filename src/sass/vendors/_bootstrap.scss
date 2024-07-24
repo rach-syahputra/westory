@@ -7,6 +7,7 @@
 @use '../vendors-extensions/bootstraps/components/toast' as toast;
 @use '../vendors-extensions/bootstraps/components/spinner' as spinner;
 @use '../vendors-extensions/bootstraps/variables/font-size.scss' as fz;
+@use '../vendors-extensions/bootstraps/variables/color.scss' as color;
 
 // ==================================================
 // Bootstrap
@@ -25,6 +26,7 @@
 // Menerapkan/override variables Bootstrap apa pun di sini
 // Utilities
 $font-sizes: map.deep-merge($font-sizes, fz.$font-sizes);
+$theme-colors: map.deep-merge($theme-colors, color.$theme-colors);
 
 // Navbar
 $navbar-light-color: navbar.$light-gray;
