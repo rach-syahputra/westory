@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="no" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s7fee95b66225e1fb">
+  <source>Dashboard</source>
+  <target>Dashbord</target>
+</trans-unit>
+<trans-unit id="s0487f33d9ddaabde">
+  <source>Om</source>
+  <target></target>
+</trans-unit>
+<trans-unit id="s5a42fe1f271dba1b">
+  <source>Add new story</source>
+  <target>legge til ny historie</target>
+</trans-unit>
+<trans-unit id="s520770ef613930ce">
+  <source>Welcome to StoryApp, where stories come to life!</source>
+  <target>Velkommen til StoryApp, hvor historier kommer til live!</target>
+</trans-unit>
+<trans-unit id="sd262aafcbbbbd642">
+  <source>A dedicated and enthusiastic Front-End Web Development student with a passion for creating
+        visually appealing and user-friendly web applications.</source>
+  <target>En dedikert og entusiastisk "Front-End Web Development"-student med lidenskap for å lage visuelt tiltalende og brukervennlige webapplikasjoner.</target>
+</trans-unit>
+</body>
+</file>
+</xliff>
