@@ -32,7 +32,7 @@ const Dashboard = {
       storyCard.classList.add('col-md-6')
       storyCard.setAttribute('imageUrl', item.photoUrl)
       storyCard.setAttribute('description', item.description)
-      storyCard.setAttribute('date', item.createdAt)
+      storyCard.setAttribute('date', this._formatDate(item.createdAt))
 
       return storyCard
     })
@@ -41,6 +41,20 @@ const Dashboard = {
     console.log(...stories)
 
     storyList.append(...stories)
+  },
+
+  _formatDate(dateStr) {
+    const date = new Date(dateStr)
+
+    const options = {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }
+
+    const formattedDate = new Intl.DateTimeFormat('id-ID', options).format(date)
+    return formattedDate
   }
 }
 
