@@ -13,9 +13,18 @@ const Add = {
         event.preventDefault()
         event.stopPropagation()
 
-        addStoryForm.classList.add('was-validated')
+        const addStoryBtn = document.querySelector('#addStoryBtn')
+        const loadingSpinner = document.querySelector('loading-spinner')
+        addStoryBtn.style.display = 'none'
+        loadingSpinner.style.display = 'block'
 
-        this._sendPost()
+        setTimeout(() => {
+          addStoryBtn.style.display = 'block'
+          loadingSpinner.style.display = 'none'
+          addStoryForm.classList.add('was-validated')
+
+          this._sendPost()
+        }, 2000)
       },
       false
     )
