@@ -1,8 +1,10 @@
+import { msg, updateWhenLocaleChanges } from '@lit/localize'
 import { css, html, LitElement } from 'lit'
 
 class FooterText extends LitElement {
   constructor() {
     super()
+    updateWhenLocaleChanges(this)
   }
 
   static styles = css`
@@ -13,7 +15,9 @@ class FooterText extends LitElement {
   `
 
   render() {
-    return html` <span class="footer-text">&copy; 2024 WeStory. All rights reserved.</span> `
+    return html`
+      <span class="footer-text">${msg(`Welcome to StoryApp, where stories come to life!`)}</span>
+    `
   }
 }
 
