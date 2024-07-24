@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title></title>
+  <title>
+    <%= htmlWebpackPlugin.options.title %> | <%= brandName %>
+  </title>
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
   <header>
-    <nav-app brandName="WeStory"></nav-app>
+    <nav-app brandName="<%= brandName %>"></nav-app>
   </header>
 
   <main>
