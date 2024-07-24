@@ -34,10 +34,7 @@ const Add = {
     const formData = this._getFormData()
 
     if (this._validateFormData({ ...formData })) {
-      console.log('formData')
-      console.log(formData)
-
-      // this._goToDashboardPage();
+      this._goToDashboardPage()
     } else {
       this._showInvalidFormToast()
     }
