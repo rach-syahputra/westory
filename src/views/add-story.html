@@ -31,12 +31,15 @@
           <input-image-with-preview inputId="validationPhoto" invalidFeedbackMessage="This field is required"
             required></input-image-with-preview>
         </div>
-        <div class="col-12 text-end">
-          <button class="btn btn-dark" type="submit">Add Story</button>
+        <div class="col-12 d-flex gap-3 justify-content-end align-items-center">
+          <loading-spinner style="display: none;"></loading-spinner>
+          <button class="btn btn-dark" type="submit" id="addStoryBtn">Add Story</button>
         </div>
       </form>
     </div>
   </main>
+
+
 
   <invalid-form-toast toastId="invalidFormToast"></invalid-form-toast>
 
