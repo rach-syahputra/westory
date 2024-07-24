@@ -24,7 +24,7 @@ class StoryCard extends LitWithoutShadowDom {
         <img src="${this.imageUrl}" class="card-img-top" alt="" />
         <div class="card-body">
           <h5 class="card-title fw-bold">${this.userName}</h5>
-          <p class="card-text mb-2">${this.description}</p>
+          <p class="card-text mb-2 lh-base">${this.description}</p>
           <p class="card-text fs-8"><small class="text-muted">${this.date}</small></p>
         </div>
       </div>
