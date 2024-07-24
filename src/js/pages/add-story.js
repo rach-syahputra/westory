@@ -1,3 +1,5 @@
+import * as bootstrap from 'bootstrap'
+
 const Add = {
   async init() {
     this._initialListener()
@@ -12,6 +14,7 @@ const Add = {
         event.stopPropagation()
 
         addStoryForm.classList.add('was-validated')
+
         this._sendPost()
       },
       false
@@ -26,6 +29,8 @@ const Add = {
       console.log(formData)
 
       // this._goToDashboardPage();
+    } else {
+      this._showInvalidFormToast()
     }
   },
 
@@ -43,6 +48,13 @@ const Add = {
     const formDataFiltered = Object.values(formData).filter((item) => item === '')
 
     return formDataFiltered.length === 0
+  },
+
+  _showInvalidFormToast() {
+    const invalidFormToast = document.getElementById('invalidFormToast')
+    const toast = new bootstrap.Toast(invalidFormToast)
+
+    toast.show()
   },
 
   _goToDashboardPage() {
