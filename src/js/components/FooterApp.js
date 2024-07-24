@@ -20,7 +20,7 @@ class FooterApp extends LitWithoutShadowDom {
             <i class="bi bi-twitter"></i>
           </div>
         </div>
-        <span class="footer-text">&copy;Copyright. All rights reserved</span>
+        <footer-text></footer-text>
       </div>
     `
   }
