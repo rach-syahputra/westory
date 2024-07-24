@@ -9,6 +9,7 @@ class FooterApp extends LitWithoutShadowDom {
   render() {
     return html`
       <div class="footer-container">
+        <locale-picker></locale-picker>
         <div class="socmed-list">
           <div class="socmed-item">
             <i class="bi bi-instagram"></i>
