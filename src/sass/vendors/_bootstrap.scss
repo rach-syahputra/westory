@@ -5,6 +5,7 @@
 @use '../vendors-extensions/bootstraps/components/card' as card;
 @use '../vendors-extensions/bootstraps/components/button' as btn;
 @use '../vendors-extensions/bootstraps/components/toast' as toast;
+@use '../vendors-extensions/bootstraps/components/spinner' as spinner;
 @use '../vendors-extensions/bootstraps/variables/font-size.scss' as fz;
 
 // ==================================================
@@ -44,6 +45,9 @@ $toast-header-color: toast.$header-color;
 $toast-background-color: toast.$background-color;
 $toast-header-background-color: toast.$header-background-color;
 
+// Spinner
+$spinner-animation-speed: spinner.$animation-speed;
+
 //
 // Konfigurasi Bootstrap
 //
@@ -66,6 +70,7 @@ $toast-header-background-color: toast.$header-background-color;
 // Komponen-Komponen
 @import '../../../node_modules/bootstrap/scss/buttons';
 @import '../../../node_modules/bootstrap/scss/toasts';
+@import '../../../node_modules/bootstrap/scss/spinners';
 //
 // Utilities API untuk menghasilkan utility classes
 //
