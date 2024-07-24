@@ -30,6 +30,7 @@ const Dashboard = {
     const stories = storyData.map((item) => {
       const storyCard = document.createElement('story-card')
       storyCard.classList.add('col-md-6')
+      storyCard.setAttribute('userName', item.name)
       storyCard.setAttribute('imageUrl', item.photoUrl)
       storyCard.setAttribute('description', item.description)
       storyCard.setAttribute('date', this._formatDate(item.createdAt))
