@@ -3,6 +3,7 @@
 // Custom modules
 @use '../vendors-extensions/bootstraps/components/navbar' as navbar;
 @use '../vendors-extensions/bootstraps/components/card' as card;
+@use '../vendors-extensions/bootstraps/components/button' as btn;
 @use '../vendors-extensions/bootstraps/variables/font-size.scss' as fz;
 
 // ==================================================
@@ -31,6 +32,11 @@ $card-border-width: card.$border-width;
 $card-border-radius: card.$border-radius;
 $card-spacer-x: card.$spacer-x;
 $card-spacer-y: card.$spacer-y;
+
+// Button
+$btn-font-weight: btn.$font-weight;
+$btn-padding-x: btn.$padding-x;
+$btn-border-radius: btn.$border-radius;
 
 //
 // Konfigurasi Bootstrap
