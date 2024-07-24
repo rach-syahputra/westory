@@ -12,6 +12,10 @@
   font-family: var.$primary-font;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 .container {
   width: 100%;
   padding: 8px;
