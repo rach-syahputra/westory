@@ -4,6 +4,7 @@
 @use '../vendors-extensions/bootstraps/components/navbar' as navbar;
 @use '../vendors-extensions/bootstraps/components/card' as card;
 @use '../vendors-extensions/bootstraps/components/button' as btn;
+@use '../vendors-extensions/bootstraps/components/toast' as toast;
 @use '../vendors-extensions/bootstraps/variables/font-size.scss' as fz;
 
 // ==================================================
@@ -38,6 +39,11 @@ $btn-font-weight: btn.$font-weight;
 $btn-padding-x: btn.$padding-x;
 $btn-border-radius: btn.$border-radius;
 
+// Toast
+$toast-header-color: toast.$header-color;
+$toast-background-color: toast.$background-color;
+$toast-header-background-color: toast.$header-background-color;
+
 //
 // Konfigurasi Bootstrap
 //
@@ -59,7 +65,7 @@ $btn-border-radius: btn.$border-radius;
 
 // Komponen-Komponen
 @import '../../../node_modules/bootstrap/scss/buttons';
-
+@import '../../../node_modules/bootstrap/scss/toasts';
 //
 // Utilities API untuk menghasilkan utility classes
 //
