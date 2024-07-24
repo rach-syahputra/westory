@@ -1,4 +1,5 @@
 import './NavApp'
+import './NavBrandName'
 import './NavLinks'
 import './NavLink'
 import './FooterApp'

@@ -21,7 +21,9 @@ class NavApp extends LitWithoutShadowDom {
     return html`
       <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">${this.brandName}</a>
+          <a class="navbar-brand" href="#">
+            <nav-brand-name brandName="${this.brandName}"></nav-brand-name>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
