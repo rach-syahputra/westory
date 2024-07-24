@@ -4,7 +4,7 @@
 .footer-container {
   background-color: var.$dark;
   @include mix.centering-using-flex($flex-dir: column);
-  gap: 16px;
+  gap: 24px;
   padding: 32px;
 
   .socmed-list {
