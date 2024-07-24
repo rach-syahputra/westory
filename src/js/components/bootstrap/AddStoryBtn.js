@@ -8,12 +8,13 @@ class AddStoryButton extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <button
-        type="button"
+      <a
         class="btn btn-dark mb-3 d-flex justify-content-center align-items-center gap-1"
+        href="/add-story.html"
+        style="width: fit-content;"
       >
         <i class="bi bi-plus fs-5"></i> <span class="fs-7">Add new story</span>
-      </button>
+      </a>
     `
   }
 }
