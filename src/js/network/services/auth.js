@@ -29,6 +29,7 @@ const Auth = {
 
       if (!response?.data.error) {
         Utils.setUserToken(config.USER_TOKEN_KEY, response.data.loginResult.token)
+        Utils.setUserName(response.data.loginResult.name)
       }
 
       return response.data
