@@ -8,11 +8,13 @@ import './components/index'
 // import * as bootstrap from 'bootstrap'
 import Dashboard from './pages/dashboard'
 import AddStory from './pages/add-story'
+import Register from './pages/auth/register'
 
 // Routing
 const routes = {
   '/': Dashboard,
   '/add-story.html': AddStory,
+  '/auth/register.html': Register,
 }
 
 const detectRoute = () => routes[window.location.pathname]
