@@ -17,18 +17,19 @@
       <form class="row g-4 mx-auto" id="registerForm" style="max-width: 400px;" novalidate>
         <div class="col-12">
           <label for="validationName" class="form-label">Name</label>
-          <input-with-validation type="text" inputId="validationName" invalidFeedbackMessage="This field is required"
+          <input-with-validation type="text" inputId="validationName" invalidFeedbackMessage="Name is required"
             required></input-with-validation>
         </div>
         <div class="col-12">
           <label for="validationEmail" class="form-label">Email</label>
-          <input-with-validation type="email" inputId="validationEmail" invalidFeedbackMessage="This field is required"
-            required></input-with-validation>
+          <input-with-validation type="email" inputId="validationEmail"
+            invalidFeedbackMessage="Email must be a valid email" required></input-with-validation>
         </div>
         <div class="col-12">
           <label for="validationPassword" class="form-label">Password</label>
           <input-with-validation type="password" inputId="validationPassword"
-            invalidFeedbackMessage="This field is required" required></input-with-validation>
+            invalidFeedbackMessage="Password must be at least 8 characters" minLength="8"
+            required></input-with-validation>
         </div>
 
         <div class="col-12 text-center text-danger" id="validationFeedback">
