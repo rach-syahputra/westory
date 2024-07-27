@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %> | <%= brandName %>
+  </title>
+</head>
+
+<body>
+  <main>
+    <div class="container d-flex flex-column gap-4">
+      <h1 class="fs-4 fw-bold mb-4 text-center">Login</h1>
+
+      <form class="row g-4 mx-auto" id="loginForm" style="max-width: 400px;" novalidate>
+        <div class="col-12">
+          <label for="validationEmail" class="form-label">Email</label>
+          <input-with-validation type="email" inputId="validationEmail" invalidFeedbackMessage="This field is required"
+            required></input-with-validation>
+        </div>
+        <div class="col-12">
+          <label for="validationPassword" class="form-label">Password</label>
+          <input-with-validation type="password" inputId="validationPassword"
+            invalidFeedbackMessage="This field is required" required></input-with-validation>
+        </div>
+        <div class="col-12 d-flex gap-3 justify-content-end align-items-center">
+          <loading-spinner class="w-100" style="display: none"></loading-spinner>
+          <button class="btn btn-dark w-100" type="submit" id="registerBtn">
+            Login
+          </button>
+        </div>
+      </form>
+
+      <div class="text-center">
+        Don't have an account yet? <a class="text-primary" href="/auth/register.html">Register</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <footer-app></footer-app>
+  </footer>
+</body>
+
+</html>
