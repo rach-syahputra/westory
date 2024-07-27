@@ -1,6 +1,7 @@
 import { basicAxios } from '../instance'
 import API_ENDPOINTS from '../endpoint'
 import Utils from '../../utils/Utils'
+import config from '../config'
 
 const Auth = {
   register: async ({ name, email, password }) => {
@@ -27,7 +28,7 @@ const Auth = {
       const response = await basicAxios.post(API_ENDPOINTS.LOGIN, requestBody)
 
       if (!response?.data.error) {
-        Utils.setUserToken('token', response.data.loginResult.token)
+        Utils.setUserToken(config.USER_TOKEN_KEY, response.data.loginResult.token)
       }
 
       return response.data
