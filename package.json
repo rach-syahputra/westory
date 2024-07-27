@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "lint": "eslint",
+    "format": "prettier --write .",
     "sass:build": "sass src/sass/main.scss css/styles.css",
     "build:prod": "webpack --config webpack.prod.js",
     "build:dev": "webpack serve --config webpack.dev.js",
