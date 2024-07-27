@@ -27,13 +27,20 @@ const Login = {
       console.log('formData')
       console.log(formData)
 
-      const response = await Auth.login({
-        email: formData.email,
-        password: formData.password,
-      })
+      try {
+        await Auth.login({
+          email: formData.email,
+          password: formData.password,
+        })
 
-      if (!response?.error) {
         this._goToDashboardPage()
+      } catch (error) {
+        console.error(error.response.status)
+
+        if (error.response.status === 401) {
+          const validationFeedback = document.querySelector('#validationFeedback')
+          validationFeedback.textContent = error.response.data.message
+        }
       }
     }
   },
@@ -49,9 +56,12 @@ const Login = {
   },
 
   _validateFormData(formData) {
-    const formDataFiltered = Object.values(formData).filter((item) => item === '')
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
-    return formDataFiltered.length === 0
+    const validEmail = emailRegex.test(formData.email)
+    const validPassword = formData.password.length >= 8
+
+    return validEmail && validPassword
   },
 
   _goToDashboardPage() {
