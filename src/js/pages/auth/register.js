@@ -27,14 +27,21 @@ const Register = {
       console.log('formData')
       console.log(formData)
 
-      const response = await Auth.register({
-        name: formData.name,
-        email: formData.email,
-        password: formData.password,
-      })
+      try {
+        await Auth.register({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        })
 
-      if (response.data) {
-        window.alert('Registered a new user')
+        this._goToLoginPage()
+      } catch (error) {
+        console.error(error.response.status)
+
+        if (error.response.status === 400) {
+          const validationFeedback = document.querySelector('#validationFeedback')
+          validationFeedback.textContent = error.response.data.message
+        }
       }
     }
   },
@@ -52,9 +59,13 @@ const Register = {
   },
 
   _validateFormData(formData) {
-    const formDataFiltered = Object.values(formData).filter((item) => item === '')
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
-    return formDataFiltered.length === 0
+    const validName = Boolean(formData.name)
+    const validEmail = emailRegex.test(formData.email)
+    const validPassword = formData.password.length >= 8
+
+    return validName && validEmail && validPassword
   },
 
   _goToLoginPage() {
