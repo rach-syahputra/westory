@@ -13,9 +13,7 @@ class NavApp extends LitWithoutShadowDom {
 
   _checkAvailabilityProperty() {
     if (!this.hasAttribute('brandName')) {
-      throw new Error(
-        `Atribut "brandName" harus diterapkan pada elemen ${this.localName}`
-      )
+      throw new Error(`Atribut "brandName" harus diterapkan pada elemen ${this.localName}`)
     }
   }
 
@@ -23,7 +21,7 @@ class NavApp extends LitWithoutShadowDom {
     return html`
       <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <nav-brand-name brandName="${this.brandName}"></nav-brand-name>
           </a>
           <button
@@ -37,10 +35,7 @@ class NavApp extends LitWithoutShadowDom {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <nav-links></nav-links>
           </div>
         </div>
