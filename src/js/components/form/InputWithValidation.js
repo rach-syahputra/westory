@@ -6,6 +6,7 @@ class InputWithValidation extends LitWithoutShadowDom {
     value: { type: String, reflect: true },
     type: { type: String, reflect: true },
     inputId: { type: String, reflect: true },
+    minLength: { type: String, reflect: true },
 
     validFeedbackMessage: { type: String, reflect: true },
     invalidFeedbackMessage: { type: String, reflect: true },
@@ -18,6 +19,7 @@ class InputWithValidation extends LitWithoutShadowDom {
     this._checkAvailabilityProperty()
 
     this.required = false
+    this.minLength = 0
   }
 
   _checkAvailabilityProperty() {
@@ -35,6 +37,7 @@ class InputWithValidation extends LitWithoutShadowDom {
         class="form-control"
         type=${this.type}
         value=${this.value || nothing}
+        minlength=${this.minLength}
         ?required=${this.required}
         @input=${(e) => (this.value = e.target.value)}
       ></input>
