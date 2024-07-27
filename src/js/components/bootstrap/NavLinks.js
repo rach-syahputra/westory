@@ -10,9 +10,11 @@ class NavLinks extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <ul class="navbar-nav">
+      <ul class="navbar-nav d-flex align-items-center gap-2">
         <nav-link to="/" content="${msg(`Dashboard`)}"></nav-link>
         <nav-link to="/about.html" content="${msg(`About`)}"></nav-link>
+        <nav-link-auth class="d-none" id="userLoggedMenu"></nav-link-auth>
+        <nav-link to="/auth/login.html" content="${msg(`Login`)}" id="loginMenu"></nav-link>
       </ul>
     `
   }

@@ -1,6 +1,7 @@
 import './bootstrap/NavApp'
 import './bootstrap/NavLinks'
 import './bootstrap/NavLink'
+import './bootstrap/NavLinkAuth'
 import './bootstrap/InvalidFormToast'
 import './bootstrap/LoadingSpinner'
 import './bootstrap/StoryCard'
