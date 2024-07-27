@@ -9,12 +9,14 @@ import './components/index'
 import Dashboard from './pages/dashboard'
 import AddStory from './pages/add-story'
 import Register from './pages/auth/register'
+import Login from './pages/auth/login'
 
 // Routing
 const routes = {
   '/': Dashboard,
   '/add-story.html': AddStory,
   '/auth/register.html': Register,
+  '/auth/login.html': Login,
 }
 
 const detectRoute = () => routes[window.location.pathname]
