@@ -1,4 +1,5 @@
 import Auth from '../../network/services/auth'
+import Utils from '../../utils/Utils'
 
 const Login = {
   async init() {
@@ -28,10 +29,13 @@ const Login = {
       console.log(formData)
 
       try {
-        await Auth.login({
+        const response = await Auth.login({
           email: formData.email,
           password: formData.password,
         })
+
+        Utils.setUserName(response.data.loginResult.name)
+        Utils.setUserToken(response.data.loginResult.token)
 
         this._goToDashboardPage()
       } catch (error) {
