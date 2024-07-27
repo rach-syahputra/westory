@@ -6,7 +6,7 @@ class StoryCard extends LitWithoutShadowDom {
     userName: { type: String, reflect: true },
     imageUrl: { type: String, reflect: true },
     description: { type: String, reflect: true },
-    date: { type: String, reflect: true }
+    date: { type: String, reflect: true },
   }
 
   constructor() {
@@ -25,7 +25,9 @@ class StoryCard extends LitWithoutShadowDom {
         <div class="card-body">
           <h5 class="card-title fw-bold">${this.userName}</h5>
           <p class="card-text mb-2 lh-base">${this.description}</p>
-          <p class="card-text fs-8"><small class="text-muted">${this.date}</small></p>
+          <p class="card-text fs-8">
+            <small class="text-muted">${this.date}</small>
+          </p>
         </div>
       </div>
     `

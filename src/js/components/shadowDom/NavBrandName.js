@@ -2,7 +2,7 @@ import { css, html, LitElement } from 'lit'
 
 class NavBrandName extends LitElement {
   static properties = {
-    brandName: { type: String, reflect: true }
+    brandName: { type: String, reflect: true },
   }
 
   constructor() {

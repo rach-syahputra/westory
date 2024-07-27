@@ -48,12 +48,12 @@ const Dashboard = {
       weekday: 'long',
       day: 'numeric',
       month: 'long',
-      year: 'numeric'
+      year: 'numeric',
     }
 
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date)
     return formattedDate
-  }
+  },
 }
 
 export default Dashboard

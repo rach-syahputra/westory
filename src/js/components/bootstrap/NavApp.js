@@ -3,7 +3,7 @@ import LitWithoutShadowDom from '../base/LitWithoutShadowDom'
 
 class NavApp extends LitWithoutShadowDom {
   static properties = {
-    brandName: { type: String, reflect: true }
+    brandName: { type: String, reflect: true },
   }
 
   constructor() {
@@ -13,7 +13,9 @@ class NavApp extends LitWithoutShadowDom {
 
   _checkAvailabilityProperty() {
     if (!this.hasAttribute('brandName')) {
-      throw new Error(`Atribut "brandName" harus diterapkan pada elemen ${this.localName}`)
+      throw new Error(
+        `Atribut "brandName" harus diterapkan pada elemen ${this.localName}`
+      )
     }
   }
 
@@ -35,7 +37,10 @@ class NavApp extends LitWithoutShadowDom {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
             <nav-links></nav-links>
           </div>
         </div>

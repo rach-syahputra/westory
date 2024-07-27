@@ -4,7 +4,7 @@ import LitWithoutShadowDom from '../base/LitWithoutShadowDom'
 class NavLink extends LitWithoutShadowDom {
   static properties = {
     content: { type: String, reflect: true },
-    to: { type: String, reflect: true }
+    to: { type: String, reflect: true },
   }
 
   constructor() {
@@ -14,7 +14,9 @@ class NavLink extends LitWithoutShadowDom {
 
   _checkAvailabilityProperty() {
     if (!this.hasAttribute('to')) {
-      throw new Error(`Atribut "to" harus diterapkan pada elemen ${this.localName}`)
+      throw new Error(
+        `Atribut "to" harus diterapkan pada elemen ${this.localName}`
+      )
     }
   }
 

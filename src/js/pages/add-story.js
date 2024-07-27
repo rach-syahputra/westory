@@ -46,12 +46,14 @@ const Add = {
 
     return {
       description: descriptionInput.value,
-      photo: photoInput.value
+      photo: photoInput.value,
     }
   },
 
   _validateFormData(formData) {
-    const formDataFiltered = Object.values(formData).filter((item) => item === '')
+    const formDataFiltered = Object.values(formData).filter(
+      (item) => item === ''
+    )
 
     return formDataFiltered.length === 0
   },
@@ -65,7 +67,7 @@ const Add = {
 
   _goToDashboardPage() {
     window.location.href = '/'
-  }
+  },
 }
 
 export default Add

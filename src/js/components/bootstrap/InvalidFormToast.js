@@ -3,7 +3,7 @@ import LitWithoutShadowDom from '../base/LitWithoutShadowDom'
 
 class InvalidFormToast extends LitWithoutShadowDom {
   static properties = {
-    toastId: { type: String, reflect: true }
+    toastId: { type: String, reflect: true },
   }
 
   constructor() {

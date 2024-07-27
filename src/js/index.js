@@ -5,14 +5,14 @@ import '../sass/main.scss'
 import './components/index'
 
 // Import javascript file as needed
-import * as bootstrap from 'bootstrap'
+// import * as bootstrap from 'bootstrap'
 import Dashboard from './pages/dashboard'
 import AddStory from './pages/add-story'
 
 // Routing
 const routes = {
   '/': Dashboard,
-  '/add-story.html': AddStory
+  '/add-story.html': AddStory,
 }
 
 const detectRoute = () => routes[window.location.pathname]

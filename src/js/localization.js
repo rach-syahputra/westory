@@ -6,7 +6,7 @@ export const { getLocale, setLocale } = configureLocalization({
   targetLocales,
   async loadLocale(locale) {
     return import(`../generated/locales/${locale}.js`)
-  }
+  },
 })
 
 export const setLocaleFromUrl = async () => {
@@ -22,5 +22,5 @@ export const localeNames = {
   en: 'English',
   id: 'Bahasa Indonesia',
   ja: '日本語',
-  no: 'norsk språk'
+  no: 'norsk språk',
 }

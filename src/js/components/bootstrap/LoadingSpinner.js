@@ -9,7 +9,11 @@ class LoadingSpinner extends LitWithoutShadowDom {
   render() {
     return html`
       <button class="btn btn-dark" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span
+          class="spinner-border spinner-border-sm"
+          role="status"
+          aria-hidden="true"
+        ></span>
         Loading...
       </button>
     `

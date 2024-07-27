@@ -15,7 +15,8 @@ class AddStoryButton extends LitWithoutShadowDom {
         href="/add-story.html"
         style="width: fit-content;"
       >
-        <i class="bi bi-plus fs-5"></i> <span class="fs-7">${msg(`Add new story`)}</span>
+        <i class="bi bi-plus fs-5"></i>
+        <span class="fs-7">${msg(`Add new story`)}</span>
       </a>
     `
   }

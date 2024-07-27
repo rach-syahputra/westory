@@ -7,21 +7,21 @@ const htmlWebpackPluginConfig = {
   meta: {
     viewport:
       'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
-    'theme-color': '#4285f4'
+    'theme-color': '#4285f4',
   },
   templateParameters: {
-    brandName: 'WeStory'
-  }
+    brandName: 'WeStory',
+  },
 }
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/js/index.js')
+    app: path.resolve(__dirname, 'src/js/index.js'),
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
   },
   module: {
     rules: [
@@ -29,56 +29,56 @@ module.exports = {
         test: /\.(s[ac]ss)$/i,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: () => [require('autoprefixer')]
-              }
-            }
+                plugins: () => [require('autoprefixer')],
+              },
+            },
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
-      }
-    ]
+            loader: 'sass-loader',
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Dashboard',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/views/dashboard.html'),
-      ...htmlWebpackPluginConfig
+      ...htmlWebpackPluginConfig,
     }),
 
     new HtmlWebpackPlugin({
       title: 'Add Story',
       filename: 'add-story.html',
       template: path.resolve(__dirname, 'src/views/add-story.html'),
-      ...htmlWebpackPluginConfig
+      ...htmlWebpackPluginConfig,
     }),
 
     new HtmlWebpackPlugin({
       title: 'About Developer',
       filename: 'about.html',
       template: path.resolve(__dirname, 'src/views/about.html'),
-      ...htmlWebpackPluginConfig
+      ...htmlWebpackPluginConfig,
     }),
 
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/')
-        }
-      ]
+          to: path.resolve(__dirname, 'dist/'),
+        },
+      ],
     }),
-    new CleanWebpackPlugin()
-  ]
+    new CleanWebpackPlugin(),
+  ],
 }

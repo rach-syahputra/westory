@@ -16,7 +16,9 @@ class FooterText extends LitElement {
 
   render() {
     return html`
-      <span class="footer-text">${msg(`Welcome to StoryApp, where stories come to life!`)}</span>
+      <span class="footer-text"
+        >${msg(`Welcome to StoryApp, where stories come to life!`)}</span
+      >
     `
   }
 }

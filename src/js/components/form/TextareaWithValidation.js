@@ -10,7 +10,7 @@ class TextareaWithValidation extends LitWithoutShadowDom {
     validFeedbackMessage: { type: String, reflect: true },
     invalidFeedbackMessage: { type: String, reflect: true },
 
-    required: { type: Boolean, reflect: true }
+    required: { type: Boolean, reflect: true },
   }
 
   constructor() {
@@ -47,7 +47,9 @@ class TextareaWithValidation extends LitWithoutShadowDom {
 
   _validFeedbackTemplate() {
     if (this.validFeedbackMessage) {
-      return html` <div class="valid-feedback">${this.validFeedbackMessage}</div> `
+      return html`
+        <div class="valid-feedback">${this.validFeedbackMessage}</div>
+      `
     }
 
     return html``

@@ -10,7 +10,7 @@ class InputImageWithPreview extends LitWithoutShadowDom {
     validFeedbackMessage: { type: String, reflect: true },
     invalidFeedbackMessage: { type: String, reflect: true },
 
-    required: { type: Boolean, reflect: true }
+    required: { type: Boolean, reflect: true },
   }
 
   constructor() {
@@ -23,7 +23,10 @@ class InputImageWithPreview extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <div style="width: 100%; height: 20rem" class="mb-3 ${!this.defaultImage ? 'd-none' : ''}">
+      <div
+        style="width: 100%; height: 20rem"
+        class="mb-3 ${!this.defaultImage ? 'd-none' : ''}"
+      >
         ${this._imagePreviewTemplate()}
       </div>
       <input
@@ -40,7 +43,9 @@ class InputImageWithPreview extends LitWithoutShadowDom {
   }
 
   _updatePhotoPreview() {
-    const evidenceImgChange = document.querySelector('#validationPhotoImgChange')
+    const evidenceImgChange = document.querySelector(
+      '#validationPhotoImgChange'
+    )
     const evidenceImgInput = document.querySelector('#validationPhoto')
 
     let evidenceRecordImg = null
@@ -68,7 +73,9 @@ class InputImageWithPreview extends LitWithoutShadowDom {
     let validFeedbackTemplate = ''
     let invalidFeedbackTemplate = ''
     if (this.validFeedbackMessage) {
-      validFeedbackTemplate = html` <div class="valid-feedback">${this.validFeedbackMessage}</div> `
+      validFeedbackTemplate = html`
+        <div class="valid-feedback">${this.validFeedbackMessage}</div>
+      `
     }
     if (this.invalidFeedbackMessage) {
       invalidFeedbackTemplate = html`

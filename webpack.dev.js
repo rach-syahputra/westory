@@ -6,15 +6,15 @@ module.exports = merge(common, {
   mode: 'development',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist')
+      directory: path.resolve(__dirname, 'dist'),
     },
     client: {
       overlay: {
         errors: true,
-        warnings: false
-      }
+        warnings: false,
+      },
     },
     watchFiles: ['src/**/*'],
-    port: 9000
-  }
+    port: 9000,
+  },
 })
