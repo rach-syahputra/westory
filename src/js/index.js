@@ -10,6 +10,7 @@ import Dashboard from './pages/dashboard'
 import AddStory from './pages/add-story'
 import Register from './pages/auth/register'
 import Login from './pages/auth/login'
+import CheckUserAuth from './pages/auth/check-user-auth'
 
 // Routing
 const routes = {
@@ -33,6 +34,8 @@ const initPages = () => {
 
 window.addEventListener('DOMContentLoaded', async () => {
   initPages()
+
+  CheckUserAuth.checkLoginState()
 
   const route = detectRoute()
   route.init()
