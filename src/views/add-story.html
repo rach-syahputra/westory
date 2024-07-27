@@ -1,56 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title><%= htmlWebpackPlugin.options.title %> | <%= brandName %></title>
 
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %> | <%= brandName %>
+  </title>
+</head>
 
-  <body>
-    <header>
-      <nav-app brandName="<%= brandName %>"></nav-app>
-    </header>
+<body>
+  <header>
+    <nav-app brandName="<%= brandName %>"></nav-app>
+  </header>
 
-    <main>
-      <div class="container">
-        <h1 class="fs-4 fw-bold mb-4">Add new story</h1>
-        <form class="row g-4" id="addStoryForm" novalidate>
-          <div class="col-12">
-            <label for="validationDescription" class="form-label"
-              >Description</label
-            >
-            <textarea-with-validation
-              inputId="validationDescription"
-              invalidFeedbackMessage="This field is required"
-              required
-            ></textarea-with-validation>
-          </div>
-          <div class="col-12">
-            <label for="validationPhoto" class="form-label">Photo</label>
-            <input-image-with-preview
-              inputId="validationPhoto"
-              invalidFeedbackMessage="This field is required"
-              required
-            ></input-image-with-preview>
-          </div>
-          <div
-            class="col-12 d-flex gap-3 justify-content-end align-items-center"
-          >
-            <loading-spinner style="display: none"></loading-spinner>
-            <button class="btn btn-dark" type="submit" id="addStoryBtn">
-              Add Story
-            </button>
-          </div>
-        </form>
-      </div>
-    </main>
+  <main>
+    <div class="container">
+      <h1 class="fs-4 fw-bold mb-4">Add new story</h1>
+      <form class="row g-4" id="addStoryForm" novalidate>
+        <div class="col-12">
+          <label for="validationDescription" class="form-label">Description</label>
+          <textarea-with-validation inputId="validationDescription" invalidFeedbackMessage="This field is required"
+            required></textarea-with-validation>
+        </div>
+        <div class="col-12">
+          <label for="validationPhoto" class="form-label">Photo</label>
+          <input-image-with-preview inputId="validationPhoto" invalidFeedbackMessage="This field is required"
+            required></input-image-with-preview>
+        </div>
+        <div class="col-12 d-flex gap-3 justify-content-end align-items-center">
+          <loading-spinner style="display: none"></loading-spinner>
+          <button class="btn btn-dark" type="submit" id="addStoryBtn">
+            Add Story
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
 
-    <invalid-form-toast toastId="invalidFormToast"></invalid-form-toast>
+  <invalid-form-toast toastId="invalidFormToast"></invalid-form-toast>
 
-    <footer>
-      <footer-app></footer-app>
-    </footer>
-  </body>
+  <footer>
+    <footer-app></footer-app>
+  </footer>
+</body>
+
 </html>
