@@ -1,14 +1,15 @@
 const USER_NAME_KEY = 'user-name'
+const USER_TOKEN_KEY = 'token'
 
 const Utils = {
-  setUserToken(key, value) {
-    return sessionStorage.setItem(key, value)
+  setUserToken(value) {
+    return sessionStorage.setItem(USER_TOKEN_KEY, value)
   },
-  getUserToken(key) {
-    return sessionStorage.getItem(key)
+  getUserToken() {
+    return sessionStorage.getItem(USER_TOKEN_KEY)
   },
-  destroyUserToken(key) {
-    return sessionStorage.removeItem(key)
+  destroyUserToken() {
+    return sessionStorage.removeItem(USER_TOKEN_KEY)
   },
   setUserName(value) {
     return sessionStorage.setItem(USER_NAME_KEY, value)
