@@ -7,9 +7,15 @@ import Utils from '../../utils/Utils'
 import config from '../../network/config'
 
 class NavLinkAuth extends LitWithoutShadowDom {
+  static properties = {
+    userName: { type: String, reflect: true },
+  }
+
   constructor() {
     super()
     updateWhenLocaleChanges(this)
+
+    this.userName = Utils.getUserName()
   }
 
   render() {
@@ -26,7 +32,7 @@ class NavLinkAuth extends LitWithoutShadowDom {
               id="imgUserLogged"
               style="width: 30px;height: 30px"
               class="img-fluid rounded-pill"
-              src="https://ui-avatars.com/api/?name=User%20Name&background=random"
+              src="https://ui-avatars.com/api/?name=${this.userName}"
               alt="User Name"
             />
           </div>
