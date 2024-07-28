@@ -1,8 +1,8 @@
-import globals from 'globals'
-import pluginJs from '@eslint/js'
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+const globals = require('globals')
+const pluginJs = require('@eslint/js')
+const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
 
-export default [
+module.exports = [
   { languageOptions: { globals: globals.browser } },
   {
     ignores: [
@@ -10,6 +10,7 @@ export default [
       'webpack.common.js',
       'webpack.dev.js',
       'webpack.prod.js',
+      'eslint.config.js',
     ],
   },
   {
