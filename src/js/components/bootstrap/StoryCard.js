@@ -7,6 +7,7 @@ class StoryCard extends LitWithoutShadowDom {
     imageUrl: { type: String, reflect: true },
     description: { type: String, reflect: true },
     date: { type: String, reflect: true },
+    height: { type: String, reflect: true },
   }
 
   constructor() {
@@ -16,12 +17,13 @@ class StoryCard extends LitWithoutShadowDom {
     this.imageUrl = ''
     this.description = ''
     this.date = ''
+    this.height = '250'
   }
 
   render() {
     return html`
-      <div class="card mb-5">
-        <img src="${this.imageUrl}" class="card-img-top" alt="" style="object-fit: cover; object-position: center; height:250px; margin-bottom: 8px; />
+      <div class="card mb-5" id="storyCard">
+        <img src="${this.imageUrl}" height="${this.height}" class="card-img-top" alt="" style="object-fit: cover; object-position: center; margin-bottom: 8px; />
         <div class="card-body">
           <h5 class="card-title fw-bold">${this.userName}</h5>
           <p class="card-text mb-2 lh-base">${this.description}</p>
