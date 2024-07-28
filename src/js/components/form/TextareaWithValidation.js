@@ -36,6 +36,7 @@ class TextareaWithValidation extends LitWithoutShadowDom {
         class="form-control"
         rows=${this.rows || nothing}
         value=${this.value || nothing}
+        maxlength="200"
         ?required=${this.required}
         @input=${(e) => (this.value = e.target.value)}
       ></textarea>
@@ -47,9 +48,7 @@ class TextareaWithValidation extends LitWithoutShadowDom {
 
   _validFeedbackTemplate() {
     if (this.validFeedbackMessage) {
-      return html`
-        <div class="valid-feedback">${this.validFeedbackMessage}</div>
-      `
+      return html` <div class="valid-feedback">${this.validFeedbackMessage}</div> `
     }
 
     return html``
