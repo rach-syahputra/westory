@@ -28,6 +28,8 @@ const Login = {
       console.log('formData')
       console.log(formData)
 
+      this._showLoading()
+
       try {
         const response = await Auth.login({
           email: formData.email,
@@ -46,6 +48,8 @@ const Login = {
           validationFeedback.textContent = error.response.data.message
         }
       }
+
+      this._hideLoading()
     }
   },
 
@@ -66,6 +70,20 @@ const Login = {
     const validPassword = formData.password.length >= 8
 
     return validEmail && validPassword
+  },
+
+  _showLoading() {
+    const loginBtn = document.querySelector('#loginBtn')
+    const loadingSpinner = document.querySelector('loading-spinner-btn')
+    loginBtn.style.display = 'none'
+    loadingSpinner.style.display = 'block'
+  },
+
+  _hideLoading() {
+    const loginBtn = document.querySelector('#loginBtn')
+    const loadingSpinner = document.querySelector('loading-spinner-btn')
+    loginBtn.style.display = 'block'
+    loadingSpinner.style.display = 'none'
   },
 
   _goToDashboardPage() {
