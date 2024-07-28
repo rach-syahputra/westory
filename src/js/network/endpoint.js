@@ -1,6 +1,6 @@
 const endpoint = {
   REGISTER: '/register',
-  LOGIN: 'login',
+  LOGIN: '/login',
 }
 
 export default endpoint
