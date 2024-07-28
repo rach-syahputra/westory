@@ -6,6 +6,8 @@ const Dashboard = {
   },
 
   async _initialData() {
+    this._showPlacehoder()
+
     try {
       const storyId = this._getStoryId()
 
@@ -15,6 +17,8 @@ const Dashboard = {
     } catch (error) {
       console.error(error)
     }
+
+    this._hidePlacehoder()
   },
 
   _populateStoryDataToCard(storyData = null) {
@@ -51,6 +55,17 @@ const Dashboard = {
   _getStoryId() {
     const searchParam = new URLSearchParams(window.location.search)
     return searchParam.has('id') ? searchParam.get('id') : null
+  },
+
+  _showPlacehoder() {
+    const StoryCardPlaceholder = document.querySelector('story-card-placeholder')
+
+    StoryCardPlaceholder.style.display = 'block'
+  },
+
+  _hidePlacehoder() {
+    const StoryCardPlaceholder = document.querySelector('story-card-placeholder')
+    StoryCardPlaceholder.style.display = 'none'
   },
 }
 
