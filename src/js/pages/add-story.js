@@ -13,18 +13,9 @@ const Add = {
         event.preventDefault()
         event.stopPropagation()
 
-        const addStoryBtn = document.querySelector('#addStoryBtn')
-        const loadingSpinner = document.querySelector('loading-spinner-btn')
-        addStoryBtn.style.display = 'none'
-        loadingSpinner.style.display = 'block'
+        addStoryForm.classList.add('was-validated')
 
-        setTimeout(() => {
-          addStoryBtn.style.display = 'block'
-          loadingSpinner.style.display = 'none'
-          addStoryForm.classList.add('was-validated')
-
-          this._sendPost()
-        }, 2000)
+        this._sendPost()
       },
       false
     )
@@ -51,9 +42,24 @@ const Add = {
   },
 
   _validateFormData(formData) {
-    const formDataFiltered = Object.values(formData).filter((item) => item === '')
+    const validDescription = formData.description
+    const validPhoto = formData.photo
 
-    return formDataFiltered.length === 0
+    return validDescription && validPhoto
+  },
+
+  _showLoading() {
+    const addStoryBtn = document.querySelector('#addStoryBtn')
+    const loadingSpinner = document.querySelector('loading-spinner-btn')
+    addStoryBtn.style.display = 'none'
+    loadingSpinner.style.display = 'block'
+  },
+
+  _hideLoading() {
+    const addStoryBtn = document.querySelector('#addStoryBtn')
+    const loadingSpinner = document.querySelector('loading-spinner-btn')
+    addStoryBtn.style.display = 'block'
+    loadingSpinner.style.display = 'none'
   },
 
   _showInvalidFormToast() {
