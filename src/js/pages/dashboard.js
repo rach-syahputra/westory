@@ -34,6 +34,14 @@ const Dashboard = {
       storyCard.setAttribute('description', item.description)
       storyCard.setAttribute('date', this._formatDate(item.createdAt))
 
+      storyCard.addEventListener(
+        'click',
+        () => {
+          window.location.href = `/story-detail.html?id=${item.id}`
+        },
+        false
+      )
+
       return storyCard
     })
 
