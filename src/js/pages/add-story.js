@@ -14,7 +14,7 @@ const Add = {
         event.stopPropagation()
 
         const addStoryBtn = document.querySelector('#addStoryBtn')
-        const loadingSpinner = document.querySelector('loading-spinner')
+        const loadingSpinner = document.querySelector('loading-spinner-btn')
         addStoryBtn.style.display = 'none'
         loadingSpinner.style.display = 'block'
 
@@ -51,9 +51,7 @@ const Add = {
   },
 
   _validateFormData(formData) {
-    const formDataFiltered = Object.values(formData).filter(
-      (item) => item === ''
-    )
+    const formDataFiltered = Object.values(formData).filter((item) => item === '')
 
     return formDataFiltered.length === 0
   },
