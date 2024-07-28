@@ -1,3 +1,5 @@
+import Story from '../network/services/story'
+
 const Dashboard = {
   async init() {
     await this._initialData()
@@ -5,14 +7,11 @@ const Dashboard = {
 
   async _initialData() {
     try {
-      const response = await fetch('/data/data.json')
-      const responseJson = await response.json()
+      const response = await Story.getAllStories()
 
-      if (!responseJson.error) {
-        this._populateStoryDataToCard(responseJson.listStory)
-      }
+      this._populateStoryDataToCard(response.data.listStory)
     } catch (error) {
-      console.error(error.message)
+      console.error(error)
     }
   },
 
