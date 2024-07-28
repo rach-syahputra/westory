@@ -1,7 +1,7 @@
 const endpoint = {
   REGISTER: '/register',
   LOGIN: '/login',
-  GET_ALL_STORIES: '/stories',
+  STORIES: '/stories',
 }
 
 export default endpoint
