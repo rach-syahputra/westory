@@ -65,6 +65,13 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      title: 'Story Detail',
+      filename: 'story-detail.html',
+      template: path.resolve(__dirname, 'src/views/story-detail.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+
+    new HtmlWebpackPlugin({
       title: 'About Developer',
       filename: 'about.html',
       template: path.resolve(__dirname, 'src/views/about.html'),
