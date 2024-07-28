@@ -1,11 +1,7 @@
 import { html } from 'lit'
 import { allLocales } from '../../generated/locale-codes.js'
 import { updateWhenLocaleChanges } from '@lit/localize'
-import {
-  getLocale,
-  localeNames,
-  setLocaleFromUrl,
-} from '../../js/localization.js'
+import { getLocale, localeNames, setLocaleFromUrl } from '../../js/localization.js'
 import LitWithoutShadowDom from './base/LitWithoutShadowDom.js'
 
 class LocalePicker extends LitWithoutShadowDom {

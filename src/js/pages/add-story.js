@@ -32,7 +32,7 @@ const Add = {
       this._showLoading()
 
       try {
-        const response = await Story.addStory({
+        await Story.addStory({
           description: formData.description,
           photo: formData.photo,
         })

@@ -1,37 +1,49 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | <%= brandName %></title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>
-    <%= htmlWebpackPlugin.options.title %> | <%= brandName %>
-  </title>
-</head>
+  <body>
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
 
-<body>
-  <header>
-    <nav-app brandName="<%= brandName %>"></nav-app>
-  </header>
+    <main>
+      <div class="container">
+        <add-story-btn></add-story-btn>
 
-  <main>
-    <div class="container">
-      <add-story-btn></add-story-btn>
+        <div class="row">
+          <story-card-placeholder
+            class="col-6"
+            imageUrl="image/gray.png"
+            style="display: none"
+          ></story-card-placeholder>
+          <story-card-placeholder
+            class="col-6"
+            imageUrl="image/gray.png"
+            style="display: none"
+          ></story-card-placeholder>
+          <story-card-placeholder
+            class="col-6"
+            imageUrl="image/gray.png"
+            style="display: none"
+          ></story-card-placeholder>
+          <story-card-placeholder
+            class="col-6"
+            imageUrl="image/gray.png"
+            style="display: none"
+          ></story-card-placeholder>
+        </div>
 
-      <div class="row">
-        <story-card-placeholder class="col-6" imageUrl="image/gray.png" style="display: none;"></story-card-placeholder>
-        <story-card-placeholder class="col-6" imageUrl="image/gray.png" style="display: none;"></story-card-placeholder>
-        <story-card-placeholder class="col-6" imageUrl="image/gray.png" style="display: none;"></story-card-placeholder>
-        <story-card-placeholder class="col-6" imageUrl="image/gray.png" style="display: none;"></story-card-placeholder>
+        <story-list></story-list>
       </div>
+    </main>
 
-      <story-list></story-list>
-    </div>
-  </main>
-
-  <footer>
-    <footer-app></footer-app>
-  </footer>
-</body>
-
+    <footer>
+      <footer-app></footer-app>
+    </footer>
+  </body>
 </html>

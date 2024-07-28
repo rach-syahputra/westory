@@ -1,57 +1,62 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | <%= brandName %></title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>
-    <%= htmlWebpackPlugin.options.title %> | <%= brandName %>
-  </title>
-</head>
+  <body>
+    <main>
+      <div class="container d-flex flex-column gap-4">
+        <h1 class="fs-4 fw-bold mb-4 text-center">Register</h1>
 
-<body>
-  <main>
-    <div class="container d-flex flex-column gap-4">
-      <h1 class="fs-4 fw-bold mb-4 text-center">Register</h1>
+        <form class="row g-4 mx-auto" id="registerForm" style="max-width: 400px" novalidate>
+          <div class="col-12">
+            <label for="validationName" class="form-label">Name</label>
+            <input-with-validation
+              type="text"
+              inputId="validationName"
+              invalidFeedbackMessage="Name is required"
+              required
+            ></input-with-validation>
+          </div>
+          <div class="col-12">
+            <label for="validationEmail" class="form-label">Email</label>
+            <input-with-validation
+              type="email"
+              inputId="validationEmail"
+              invalidFeedbackMessage="Email must be a valid email"
+              required
+            ></input-with-validation>
+          </div>
+          <div class="col-12">
+            <label for="validationPassword" class="form-label">Password</label>
+            <password-input-with-validation
+              class="position-relative"
+              inputId="validationPassword"
+              invalidFeedbackMessage="Password must be at least 8 characters"
+              minLength="8"
+              required
+            ></password-input-with-validation>
+          </div>
 
-      <form class="row g-4 mx-auto" id="registerForm" style="max-width: 400px;" novalidate>
-        <div class="col-12">
-          <label for="validationName" class="form-label">Name</label>
-          <input-with-validation type="text" inputId="validationName" invalidFeedbackMessage="Name is required"
-            required></input-with-validation>
+          <div class="col-12 text-center text-danger" id="validationFeedback"></div>
+
+          <div class="col-12 d-flex gap-3 justify-content-end align-items-center">
+            <loading-spinner-btn class="w-100" style="display: none"></loading-spinner-btn>
+            <button class="btn btn-dark w-100" type="submit" id="registerBtn">Register</button>
+          </div>
+        </form>
+
+        <div class="text-center">
+          Already have an account? <a class="text-primary" href="/auth/login.html">Login</a>
         </div>
-        <div class="col-12">
-          <label for="validationEmail" class="form-label">Email</label>
-          <input-with-validation type="email" inputId="validationEmail"
-            invalidFeedbackMessage="Email must be a valid email" required></input-with-validation>
-        </div>
-        <div class="col-12">
-          <label for="validationPassword" class="form-label">Password</label>
-          <password-input-with-validation class="position-relative" inputId="validationPassword"
-            invalidFeedbackMessage="Password must be at least 8 characters" minLength="8"
-            required></password-input-with-validation>
-        </div>
-
-        <div class="col-12 text-center text-danger" id="validationFeedback">
-        </div>
-
-        <div class="col-12 d-flex gap-3 justify-content-end align-items-center">
-          <loading-spinner-btn class="w-100" style="display: none"></loading-spinner-btn>
-          <button class="btn btn-dark w-100" type="submit" id="registerBtn">
-            Register
-          </button>
-        </div>
-      </form>
-
-      <div class="text-center">
-        Already have an account? <a class="text-primary" href="/auth/login.html">Login</a>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <footer-app></footer-app>
-  </footer>
-</body>
-
+    <footer>
+      <footer-app></footer-app>
+    </footer>
+  </body>
 </html>

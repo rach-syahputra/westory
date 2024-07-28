@@ -2,7 +2,6 @@ import { html } from 'lit'
 import LitWithoutShadowDom from '../base/LitWithoutShadowDom'
 import { msg, updateWhenLocaleChanges } from '@lit/localize'
 import CheckUserAuth from '../../pages/auth/check-user-auth'
-import Auth from '../../network/services/auth'
 import Utils from '../../utils/Utils'
 import config from '../../network/config'
 

@@ -25,9 +25,7 @@ class ProfileImage extends LitElement {
   render() {
     return html`
       <img
-        src="${this.imageUrl
-          ? this.imageUrl
-          : 'https://picsum.photos/1200/700?random=3'}"
+        src="${this.imageUrl ? this.imageUrl : 'https://picsum.photos/1200/700?random=3'}"
         alt=""
       />
     `
