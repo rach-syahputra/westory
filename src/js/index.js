@@ -8,6 +8,7 @@ import './components/index'
 // import * as bootstrap from 'bootstrap'
 import Dashboard from './pages/dashboard'
 import AddStory from './pages/add-story'
+import StoryDetail from './pages/story-detail'
 import Register from './pages/auth/register'
 import Login from './pages/auth/login'
 import CheckUserAuth from './pages/auth/check-user-auth'
@@ -16,6 +17,7 @@ import CheckUserAuth from './pages/auth/check-user-auth'
 const routes = {
   '/': Dashboard,
   '/add-story.html': AddStory,
+  '/story-detail.html': StoryDetail,
   '/auth/register.html': Register,
   '/auth/login.html': Login,
 }

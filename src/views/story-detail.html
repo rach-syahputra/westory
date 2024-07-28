@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %> | <%= brandName %>
+  </title>
+</head>
+
+<body>
+  <header>
+    <nav-app brandName="<%= brandName %>"></nav-app>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="storyContainer"></div>
+    </div>
+  </main>
+
+  <footer>
+    <footer-app></footer-app>
+  </footer>
+</body>
+
+</html>
