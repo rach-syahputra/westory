@@ -6,6 +6,8 @@ const Dashboard = {
   },
 
   async _initialData() {
+    this._showPlacehoder()
+
     try {
       const response = await Story.getAllStories()
 
@@ -13,6 +15,8 @@ const Dashboard = {
     } catch (error) {
       console.error(error)
     }
+
+    this._hidePlacehoder()
   },
 
   _populateStoryDataToCard(storyData = null) {
@@ -46,6 +50,22 @@ const Dashboard = {
     })
 
     storyList.append(...stories)
+  },
+
+  _showPlacehoder() {
+    const StoryCardPlaceholders = document.querySelectorAll('story-card-placeholder')
+
+    StoryCardPlaceholders.forEach((element) => {
+      element.style.display = 'block'
+    })
+  },
+
+  _hidePlacehoder() {
+    const StoryCardPlaceholders = document.querySelectorAll('story-card-placeholder')
+
+    StoryCardPlaceholders.forEach((element) => {
+      element.style.display = 'none'
+    })
   },
 
   _formatDate(dateStr) {
