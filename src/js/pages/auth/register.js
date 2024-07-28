@@ -27,6 +27,8 @@ const Register = {
       console.log('formData')
       console.log(formData)
 
+      this._showLoading()
+
       try {
         await Auth.register({
           name: formData.name,
@@ -43,6 +45,8 @@ const Register = {
           validationFeedback.textContent = error.response.data.message
         }
       }
+
+      this._hideLoading()
     }
   },
 
@@ -66,6 +70,20 @@ const Register = {
     const validPassword = formData.password.length >= 8
 
     return validName && validEmail && validPassword
+  },
+
+  _showLoading() {
+    const registerBtn = document.querySelector('#registerBtn')
+    const loadingSpinner = document.querySelector('loading-spinner-btn')
+    registerBtn.style.display = 'none'
+    loadingSpinner.style.display = 'block'
+  },
+
+  _hideLoading() {
+    const registerBtn = document.querySelector('#registerBtn')
+    const loadingSpinner = document.querySelector('loading-spinner-btn')
+    registerBtn.style.display = 'block'
+    loadingSpinner.style.display = 'none'
   },
 
   _goToLoginPage() {
