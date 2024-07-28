@@ -12,7 +12,7 @@ const basicAxios = axios.create({
 const authAxios = axios.create({
   baseURL: config.BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'multipart/form-data',
     Authorization: `Bearer ${Utils.getUserToken()}`,
   },
 })
