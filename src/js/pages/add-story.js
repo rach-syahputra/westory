@@ -1,4 +1,5 @@
 import * as bootstrap from 'bootstrap'
+import Story from '../network/services/story'
 
 const Add = {
   async init() {
@@ -21,14 +22,30 @@ const Add = {
     )
   },
 
-  _sendPost() {
+  async _sendPost() {
     const formData = this._getFormData()
 
     if (this._validateFormData({ ...formData })) {
-      this._goToDashboardPage()
+      console.log('formData')
+      console.log(formData)
+
+      this._showLoading()
+
+      try {
+        const response = await Story.addStory({
+          description: formData.description,
+          photo: formData.photo,
+        })
+
+        this._goToDashboardPage()
+      } catch (error) {
+        console.error(error)
+      }
     } else {
       this._showInvalidFormToast()
     }
+
+    this._hideLoading()
   },
 
   _getFormData() {
@@ -37,7 +54,7 @@ const Add = {
 
     return {
       description: descriptionInput.value,
-      photo: photoInput.value,
+      photo: photoInput.files[0],
     }
   },
 
