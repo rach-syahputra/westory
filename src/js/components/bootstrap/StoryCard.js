@@ -20,8 +20,8 @@ class StoryCard extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <div class="card mb-4">
-        <img src="${this.imageUrl}" class="card-img-top" alt="" />
+      <div class="card mb-5">
+        <img src="${this.imageUrl}" class="card-img-top" alt="" style="object-fit: cover; object-position: center; height:250px; margin-bottom: 8px; />
         <div class="card-body">
           <h5 class="card-title fw-bold">${this.userName}</h5>
           <p class="card-text mb-2 lh-base">${this.description}</p>
