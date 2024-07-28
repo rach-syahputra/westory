@@ -1,0 +1,10 @@
+@use '../abstracts//variables' as var;
+
+#storyCard {
+  cursor: pointer;
+  transition: var.$smooth-transition;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
