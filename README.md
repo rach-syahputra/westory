@@ -11,5 +11,5 @@ Web Application for sharing stories. A "Front-End Developer Intermediate" submis
 - ![Bootstrap](https://img.shields.io/badge/bootstrap-black?style=for-the-badge&logo=bootstrap)
 - ![Axios](https://img.shields.io/badge/axios-black?style=for-the-badge&logo=axios)
 
-## Links
+## Project Link
 - https://westory-app.web.app/
